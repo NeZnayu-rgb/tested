@@ -95,3 +95,12 @@ body{
     margin-top: auto;
 
 }
+
+.footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Optional: Background color */
+    padding: 10px 0;
+    text-align: center;
+}
