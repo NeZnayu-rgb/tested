@@ -1,3 +1,20 @@
+window.onload = function () {
+    const dialog = document.getElementById("MyModule");
+    const agreeButton = document.getElementById("agreeButton");
+    const confirmCheckbox = document.getElementById("confirmCheckbox");
+
+    dialog.showModal();
+
+    agreeButton.addEventListener("click", function(event) {
+        if (!confirmCheckbox.checked) {
+            event.preventDefault(); 
+            alert("Пожалуйста, подтвердите, что вы прочитали информацию.");
+        }
+        
+    });
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('fetch.php')
         .then(response => response.json())
