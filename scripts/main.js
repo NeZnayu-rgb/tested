@@ -17,6 +17,13 @@ window.onload = function () {
     });
 };
 
+window.onload = function () {
+    setTimeout(() => {
+        const dialog = document.getElementById("MyModule");
+        if (dialog) dialog.showModal();
+    }, 100);
+};
+
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch('fetch.php')
