@@ -3,6 +3,10 @@ window.onload = function () {
     const agreeButton = document.getElementById("agreeButton");
     const confirmCheckbox = document.getElementById("confirmCheckbox");
 
+    if (!dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+    }
+
     dialog.showModal();
 
     agreeButton.addEventListener("click", function(event) {
@@ -10,7 +14,6 @@ window.onload = function () {
             event.preventDefault(); 
             alert("Пожалуйста, подтвердите, что вы прочитали информацию.");
         }
-        
     });
 };
 
