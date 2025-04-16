@@ -7,7 +7,10 @@ window.onload = function () {
         dialogPolyfill.registerDialog(dialog);
     }
 
-    dialog.showModal();
+    // Optional delay for stability
+    setTimeout(() => {
+        dialog.showModal();
+    }, 100);
 
     agreeButton.addEventListener("click", function(event) {
         if (!confirmCheckbox.checked) {
@@ -15,13 +18,6 @@ window.onload = function () {
             alert("Пожалуйста, подтвердите, что вы прочитали информацию.");
         }
     });
-};
-
-window.onload = function () {
-    setTimeout(() => {
-        const dialog = document.getElementById("MyModule");
-        if (dialog) dialog.showModal();
-    }, 100);
 };
 
 
